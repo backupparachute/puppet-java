@@ -9,9 +9,9 @@ class nginx {
       notify  => Service['nginx'],
     }
 
-    file { '/etc/nginx/sites-enabled/rails-app':
+    file { '/etc/nginx/sites-enabled/java-app':
         ensure  => file,
-        content => template("nginx/rails-app.conf.erb"),
+        content => template("nginx/java-app.conf.erb"),
         require => Package['nginx'],
         notify  => Service['nginx'],
     }
