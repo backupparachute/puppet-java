@@ -8,6 +8,7 @@ class misc {
 
 	package {'git': ensure => installed }
 	package { 'libmysqlclient-dev': ensure => installed }
+	package { 'jetty': ensure => installed }
 
 }
 
