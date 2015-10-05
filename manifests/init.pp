@@ -9,6 +9,9 @@ class misc {
 	package {'git': ensure => installed }
 	package { 'libmysqlclient-dev': ensure => installed }
 	package { 'jetty': ensure => installed }
+	package { 'zip': ensure => installed }
+	package { 'unzip': ensure => installed }
+	package { 'wget': ensure => installed }
 
 }
 
