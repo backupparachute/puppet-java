@@ -9,6 +9,7 @@ class jetty {
       owner => 'root',
       group => 'root',
       mode  => '0744',
+      notify => User['jetty'],
   }
 
   file {
@@ -30,9 +31,9 @@ class jetty {
      before  => User['jetty'],
   }
 
-  user { "jetty":
+  user { 'jetty':
     ensure   => "present",
-    managehome => true,
+      managehome => true,
   }
 
   service { 'jetty':
