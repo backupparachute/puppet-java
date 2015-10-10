@@ -5,7 +5,7 @@ class jetty {
     'jetty-conf':
       ensure => 'file',
       source => 'puppet:///modules/jetty/jetty.conf',
-      path => '/usr/default/jetty',
+      path => '/etc/default/jetty',
       owner => 'root',
       group => 'root',
       mode  => '0744',
