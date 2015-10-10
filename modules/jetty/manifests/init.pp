@@ -32,7 +32,7 @@ class jetty {
 
   user { "jetty":
     ensure   => "present",
-    #managehome => true,
+    managehome => true,
   }
 
   service { 'jetty':
