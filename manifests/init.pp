@@ -26,6 +26,6 @@ class { requirements: }
 class { misc: }
 
 class { java: }
-class { nginx: }
+# class { nginx: }
 class { swap: }
 class { jetty: require => Class[Java]}
