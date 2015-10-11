@@ -11,7 +11,7 @@ class iptables {
       owner => 'root',
       group => 'root',
       mode  => '0744',
-      requires => Package['iptables'],
+      require => Package['iptables'],
       notify => File['setup-iptables'],
   }
 
