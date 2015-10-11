@@ -28,18 +28,19 @@ class jetty {
      command => '/usr/local/bin/setup-jetty.sh',
      unless => ["test -f /opt/jetty/bin/jetty.sh"],
      notify  => Service['jetty'],
-     before  => User['jetty'],
+     require  => File['setup-jetty']
   }
 
   user { 'jetty':
     ensure   => "present",
-      managehome => true,
+    managehome => true,
+    require => File['setup-jetty']
   }
 
   service { 'jetty':
       ensure  => running,
       enable  => true,
-      before  => User['jetty'],
+      require  => Exec['run_setup_jetty'],
   }
 
 }
