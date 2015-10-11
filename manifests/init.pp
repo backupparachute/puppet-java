@@ -28,4 +28,5 @@ class { misc: }
 class { java: }
 # class { nginx: }
 class { swap: }
+class { iptables: }
 class { jetty: require => Class[Java]}
